@@ -9,7 +9,6 @@ public class Kotik {
     private String meo;
 
 
-
     private static int catsCount = 0;
 
 
@@ -127,8 +126,7 @@ public class Kotik {
                         break;
 
                 }
-            }
-            else eat(5, "сосисок");
+            } else eat(5, "сосисок");
         }
 
     }
@@ -152,6 +150,7 @@ public class Kotik {
     public String getMeo() {
         return meo;
     }
+
     public static int getCatsCount() {
         return catsCount;
     }
