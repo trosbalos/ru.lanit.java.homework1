@@ -1,18 +1,10 @@
 package zoo.animals;
 
-import zoo.food.Food;
-import zoo.food.Grass;
-import zoo.food.Meat;
-
 public class Duck extends Carnivorous implements Voice, Swim, Run, Fly {
-    @Override
-    public void eat(Food food) {
-        if (food instanceof Meat) {
-            System.out.println("Утка скушала мясо");
-        }
-        if (food instanceof Grass) {
-            System.out.println("Утка не кушает траву");
-        }
+
+
+    public Duck(String name) {
+        super(name);
     }
 
     @Override

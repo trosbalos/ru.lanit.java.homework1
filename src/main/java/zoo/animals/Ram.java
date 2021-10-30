@@ -1,19 +1,10 @@
 package zoo.animals;
 
-import zoo.food.Food;
-import zoo.food.Grass;
-import zoo.food.Meat;
-
 public class Ram extends Herbivore implements Run, Voice, Swim {
 
-    @Override
-    public void eat(Food food) {
-        if (food instanceof Meat) {
-            System.out.println("Баран масо не кушает");
-        }
-        if (food instanceof Grass) {
-            System.out.println("Баран поел травы");
-        }
+
+    public Ram(String name) {
+        super(name);
     }
 
     @Override

@@ -8,13 +8,13 @@ import java.util.ArrayList;
 public class Zoo {
     public static void main(String[] args) {
 
-        Cow cow = new Cow();
-        Duck duck = new Duck();
-        Elk elk = new Elk();
-        Fish fish = new Fish();
-        Fish fish2 = new Fish();
-        Ram ram = new Ram();
-        Wolf wolf = new Wolf();
+        Cow cow = new Cow("Корова Дуся");
+        Duck duck = new Duck("Утка Вася");
+        Elk elk = new Elk("Лось Анатолий");
+        Fish fish = new Fish("Рыба Коля");
+        Fish fish2 = new Fish("Рыба Кит");
+        Ram ram = new Ram("Баран Илья");
+        Wolf wolf = new Wolf("Волк Петр");
         Grass grass = new Grass();
         Meat meat = new Meat();
         Worker worker = new Worker();
