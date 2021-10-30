@@ -14,10 +14,6 @@ public class Wolf extends Carnivorous implements Run, Voice, Swim {
         System.out.println("Волк бежит");
     }
 
-    @Override
-    public void swim() {
-        System.out.println("Волк плывет");
-    }
 
     @Override
     public String voice() {

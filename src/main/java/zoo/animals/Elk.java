@@ -12,10 +12,6 @@ public class Elk extends Herbivore implements Voice, Swim, Run {
         System.out.println("Лось бежит");
     }
 
-    @Override
-    public void swim() {
-        System.out.println("Лось плывет");
-    }
 
     @Override
     public String voice() {

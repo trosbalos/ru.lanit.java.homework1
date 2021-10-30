@@ -6,6 +6,7 @@ import zoo.food.Meat;
 
 public abstract class Herbivore extends Animal {
     String name;
+    String voice;
 
     public Herbivore(String name) {
         this.name = name;
@@ -22,5 +23,8 @@ public abstract class Herbivore extends Animal {
     }
 
     @Override
-    public abstract void swim();
+    public void swim(){
+        System.out.println(name + " плывет");
+
+    };
 }

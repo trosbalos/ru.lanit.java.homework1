@@ -17,10 +17,6 @@ public class Duck extends Carnivorous implements Voice, Swim, Run, Fly {
         System.out.println("Утка бежит");
     }
 
-    @Override
-    public void swim() {
-        System.out.println("Утка плывет");
-    }
 
     @Override
     public String voice() {

@@ -8,14 +8,15 @@ public class Ram extends Herbivore implements Run, Voice, Swim {
     }
 
     @Override
+    public void swim() {
+
+    }
+
+    @Override
     public void run() {
         System.out.println("Баран бежит");
     }
 
-    @Override
-    public void swim() {
-        System.out.println("Баран плывет");
-    }
 
     @Override
     public String voice() {

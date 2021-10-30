@@ -4,7 +4,7 @@ import zoo.food.Grass;
 import zoo.food.Meat;
 
 
-public abstract class Carnivorous extends Animal implements Food {
+public  class Carnivorous extends Animal implements Food {
 String name;
 
     public Carnivorous(String name) {
@@ -19,5 +19,10 @@ String name;
         if (food instanceof Grass) {
             System.out.println(name+" не кушает траву");
         }
+    }
+
+    @Override
+    public void swim() {
+        System.out.println(name + " плывет");
     }
 }

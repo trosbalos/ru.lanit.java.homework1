@@ -14,13 +14,15 @@ public class Cow extends Herbivore implements Voice, Run {
         System.out.println("Корова поплыла");
     }
 
-    @Override
-    public void run() {
-        System.out.println("Корова бежит");
-    }
+
 
     @Override
     public String voice() {
         return "Moo";
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Корова бежит");
     }
 }
