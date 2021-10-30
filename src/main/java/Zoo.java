@@ -35,7 +35,6 @@ public class Zoo {
         worker.getVoice(cow);
         worker.getVoice(duck);
         worker.getVoice(elk);
-        worker.getVoice(fish);
         worker.getVoice(ram);
         worker.getVoice(wolf);
 

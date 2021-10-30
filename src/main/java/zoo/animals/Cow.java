@@ -17,6 +17,11 @@ public class Cow extends Herbivore implements Voice, Run {
     }
 
     @Override
+    public void swim() {
+        System.out.println("Корова поплыла");
+    }
+
+    @Override
     public void run() {
         System.out.println("Корова бежит");
     }

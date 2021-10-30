@@ -1,10 +1,7 @@
 import model.Kotik;
 
 public class Application {
-    /*
-    Создать в корневом каталоге с программой класс Application
-    с точкой входа в программу (метод public static void main(String[] args)).
-     */
+
     public static void main(String[] args) {
         Kotik murizik = new Kotik(0, 3, "Murzik", 4, "уоууу");
         Kotik barsik = new Kotik();

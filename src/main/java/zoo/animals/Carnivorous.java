@@ -2,14 +2,11 @@ package zoo.animals;
 
 import zoo.food.Food;
 
-public class Carnivorous extends Animal {
-    @Override
-    public void eat(Food food) {
-
-    }
+public abstract class Carnivorous extends Animal {
 
     @Override
-    public void swim() {
+    public abstract void eat(Food food);
 
-    }
+    @Override
+    public abstract void swim();
 }
