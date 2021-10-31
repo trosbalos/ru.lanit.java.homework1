@@ -1,6 +1,7 @@
-package Aviary;
+package zoo.Aviary;
 
 import zoo.animals.Animal;
+
 import java.util.HashMap;
 import java.util.Objects;
 /*
@@ -14,41 +15,45 @@ import java.util.Objects;
  что его размер подходит для этого животного.
 */
 
-public class Aviary {
+public class Aviary<T> {
     public int aviaryMapSize = 0;
-    HashMap<Integer, Animal> aviary = new HashMap<Integer, Animal>();
+    private final HashMap<Integer, T> aviary = new HashMap<Integer, T>();
     int aviarySize = 100;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Aviary aviary1 = (Aviary) o;
+        Aviary<?> aviary1 = (Aviary<?>) o;
         return aviaryMapSize == aviary1.aviaryMapSize &&
+                aviarySize == aviary1.aviarySize &&
                 Objects.equals(aviary, aviary1.aviary);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(aviaryMapSize, aviary);
+        return Objects.hash(aviaryMapSize, aviary, aviarySize);
     }
 
-
-
-
-    public void addAnimal(Animal animal,int animalSize){
-        if(aviarySize>=animalSize){
-        aviarySize -=animalSize;
-        aviary.put(aviaryMapSize,animal);
-        aviaryMapSize++;
-            System.out.println(animal.name + " в загоне");}
-        else System.out.println(animal.name+" размером "+animalSize+ " не помещается в загон. Осталось места: " + aviarySize);
-
-
+    public void addAnimalToCarnivorous(T animal, int animalSize) {
+        if (aviarySize >= animalSize) {
+            aviarySize -= animalSize;
+            aviary.put(aviaryMapSize, animal);
+            aviaryMapSize++;
+        }
     }
-    public void removeAnimal(String string,int animalSize) {
+
+    public void addAnimalToHerbivore(T animal, int animalSize) {
+        if (aviarySize >= animalSize) {
+            aviarySize -= animalSize;
+            aviary.put(aviaryMapSize, animal);
+            aviaryMapSize++;
+        }
+    }
+
+    public void removeAnimal(String string, int animalSize) {
         for (Integer key : aviary.keySet()) {
-            Animal value = aviary.get(key);
+            Animal value = (Animal) aviary.get(key);
             if (value.name.equals(string)) {
                 aviary.remove(key);
                 aviarySize += animalSize;
@@ -59,19 +64,20 @@ public class Aviary {
         }
 
     }
+
     public Animal getAnimal(String string) {
         for (Integer key : aviary.keySet()) {
-            Animal value = aviary.get(key);
+            Animal value = (Animal) aviary.get(key);
             if (string.equals(value.name)) {
                 return value;
             }
         }
         return null;
     }
-    public void printAnimals(){
-        for (Integer key: aviary.keySet())
-        {
-            Animal value = aviary.get(key);
+
+    public void printAnimals() {
+        for (Integer key : aviary.keySet()) {
+            Animal value = (Animal) aviary.get(key);
             System.out.println(key + " --> " + value.name);
         }
     }

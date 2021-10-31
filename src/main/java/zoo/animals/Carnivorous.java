@@ -1,7 +1,7 @@
 package zoo.animals;
 
+import zoo.Exeption.WrongFoodException;
 import zoo.food.Food;
-import zoo.food.Grass;
 import zoo.food.Meat;
 
 public class Carnivorous extends Animal {
@@ -13,8 +13,7 @@ public class Carnivorous extends Animal {
     public void eat(Food food) throws WrongFoodException {
         if (food instanceof Meat) {
             System.out.println(name + " кушает мясо");
-        }
-//        else throw new WrongFoodException();
+        } else throw new WrongFoodException(name + " не кушает траву");
 
     }
 

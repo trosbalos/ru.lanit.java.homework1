@@ -1,7 +1,10 @@
 package zoo.animals;
 
-public class Elk extends Herbivore implements Voice, Swim, Run {
+import zoo.animals.move.Run;
+import zoo.animals.move.Swim;
+import zoo.animals.move.Voice;
 
+public class Elk extends Herbivore implements Voice, Swim, Run {
 
 
     public Elk(String name) {

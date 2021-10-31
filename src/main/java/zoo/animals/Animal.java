@@ -1,5 +1,6 @@
 package zoo.animals;
 
+import zoo.Exeption.WrongFoodException;
 import zoo.food.Food;
 
 public abstract class Animal implements Food {

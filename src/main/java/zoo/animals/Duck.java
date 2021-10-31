@@ -1,5 +1,10 @@
 package zoo.animals;
 
+import zoo.animals.move.Fly;
+import zoo.animals.move.Run;
+import zoo.animals.move.Swim;
+import zoo.animals.move.Voice;
+
 public class Duck extends Carnivorous implements Voice, Swim, Run, Fly {
 
 

@@ -1,4 +1,5 @@
-import Aviary.Aviary;
+import zoo.Aviary.Aviary;
+import zoo.Exeption.WrongFoodException;
 import zoo.animals.*;
 import zoo.food.Grass;
 import zoo.food.Meat;
@@ -52,12 +53,18 @@ public class Zoo {
 
         }
         Aviary avi = new Aviary();
-        avi.addAnimal(cow,50);
-        avi.addAnimal(wolf,50);
-        avi.removeAnimal("Корова Дуся",50);
-        avi.addAnimal(ram,10);
-
+        avi.addAnimalToHerbivore(cow, 50);
+        avi.addAnimalToHerbivore(elk, 50);
+        avi.removeAnimal("Корова Дуся", 50);
+        avi.addAnimalToHerbivore(ram, 10);
         avi.printAnimals();
         System.out.println(avi.getAnimal("Баран Илья"));
+        Aviary avi2 = new Aviary();
+        avi2.addAnimalToCarnivorous(wolf, 10);
+        avi2.addAnimalToCarnivorous(fish, 10);
+        avi2.addAnimalToCarnivorous(duck, 10);
+        avi2.printAnimals();
+
+
     }
 }

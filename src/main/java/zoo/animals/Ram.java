@@ -1,5 +1,9 @@
 package zoo.animals;
 
+import zoo.animals.move.Run;
+import zoo.animals.move.Swim;
+import zoo.animals.move.Voice;
+
 public class Ram extends Herbivore implements Run, Voice, Swim {
 
 
