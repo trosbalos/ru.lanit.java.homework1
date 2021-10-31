@@ -7,10 +7,6 @@ public class Ram extends Herbivore implements Run, Voice, Swim {
         super(name);
     }
 
-    @Override
-    public void swim() {
-
-    }
 
     @Override
     public void run() {

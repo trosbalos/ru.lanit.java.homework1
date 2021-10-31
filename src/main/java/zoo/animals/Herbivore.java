@@ -5,26 +5,24 @@ import zoo.food.Grass;
 import zoo.food.Meat;
 
 public abstract class Herbivore extends Animal {
-    String name;
-    String voice;
+
 
     public Herbivore(String name) {
-        this.name = name;
+        super(name);
     }
 
     @Override
-    public void eat(Food food) {
-        if (food instanceof Meat) {
-            System.out.println(name+" скушало мясо");
-        }
+    public void eat(Food food) throws WrongFoodException {
         if (food instanceof Grass) {
-            System.out.println(name+" не кушает траву");
+            System.out.println(name + " кушает траву");
         }
+//        else throw new WrongFoodException();
     }
 
     @Override
-    public void swim(){
+    public void swim() {
         System.out.println(name + " плывет");
 
-    };
+    }
+
 }

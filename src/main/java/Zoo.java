@@ -1,3 +1,4 @@
+import Aviary.Aviary;
 import zoo.animals.*;
 import zoo.food.Grass;
 import zoo.food.Meat;
@@ -6,7 +7,7 @@ import zoo.personal.Worker;
 import java.util.ArrayList;
 
 public class Zoo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws WrongFoodException {
 
         Cow cow = new Cow("Корова Дуся");
         Duck duck = new Duck("Утка Вася");
@@ -50,5 +51,13 @@ public class Zoo {
             animal.swim();
 
         }
+        Aviary avi = new Aviary();
+        avi.addAnimal(cow,50);
+        avi.addAnimal(wolf,50);
+        avi.removeAnimal("Корова Дуся",50);
+        avi.addAnimal(ram,10);
+
+        avi.printAnimals();
+        System.out.println(avi.getAnimal("Баран Илья"));
     }
 }

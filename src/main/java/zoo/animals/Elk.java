@@ -3,6 +3,7 @@ package zoo.animals;
 public class Elk extends Herbivore implements Voice, Swim, Run {
 
 
+
     public Elk(String name) {
         super(name);
     }

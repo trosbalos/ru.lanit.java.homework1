@@ -7,8 +7,4 @@ public class Fish extends Carnivorous implements Swim {
         super(name);
     }
 
-    @Override
-    public void swim() {
-        System.out.println("Рыбка плывет");
-    }
 }
