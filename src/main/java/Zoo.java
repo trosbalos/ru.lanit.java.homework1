@@ -1,6 +1,6 @@
-import zoo.Aviary.Aviary;
-import zoo.Exeption.WrongFoodException;
 import zoo.animals.*;
+import zoo.aviary.Aviary;
+import zoo.exeption.WrongFoodException;
 import zoo.food.Grass;
 import zoo.food.Meat;
 import zoo.personal.Worker;
@@ -50,20 +50,28 @@ public class Zoo {
 
         for (Animal animal : pool) {
             animal.swim();
-
         }
-        Aviary avi = new Aviary();
-        avi.addAnimalToHerbivore(cow, 50);
-        avi.addAnimalToHerbivore(elk, 50);
-        avi.removeAnimal("Корова Дуся", 50);
-        avi.addAnimalToHerbivore(ram, 10);
-        avi.printAnimals();
-        System.out.println(avi.getAnimal("Баран Илья"));
+        System.out.println("----------------");
+
+        Aviary avi1 = new Aviary();
+        avi1.addAnimal(fish2.getName(), fish2);
+        avi1.addAnimal(fish.getName(), fish);
+        avi1.printAnimals();
+        avi1.removeAnimal(fish2.getName());
+        avi1.printAnimals();
+
         Aviary avi2 = new Aviary();
-        avi2.addAnimalToCarnivorous(wolf, 10);
-        avi2.addAnimalToCarnivorous(fish, 10);
-        avi2.addAnimalToCarnivorous(duck, 10);
+        avi2.addAnimal(wolf.getName(), wolf);
+        avi2.addAnimal(fish.getName(), fish);
+        avi2.addAnimal(duck.getName(), duck);
         avi2.printAnimals();
+        avi2.getAnimal(wolf.getName());
+
+
+        Aviary avi3 = new Aviary();
+        avi3.addAnimal("Корова Дуся", cow);
+        avi3.addAnimal("Лось Анатолий", elk);
+        avi3.printAnimals();
 
 
     }

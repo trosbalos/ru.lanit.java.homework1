@@ -1,10 +1,13 @@
 package zoo.animals;
 
-import zoo.Exeption.WrongFoodException;
+import zoo.aviary.SizeEnum;
+import zoo.exeption.WrongFoodException;
 import zoo.food.Food;
 
 public abstract class Animal implements Food {
-    public String name;
+    private String name;
+     SizeEnum sizeEnum;
+
 
 
     public Animal(String name) {
@@ -14,4 +17,15 @@ public abstract class Animal implements Food {
     public abstract void eat(Food food) throws WrongFoodException;
 
     public abstract void swim();
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public SizeEnum getSizeEnum() {
+        return sizeEnum;
+    }
 }

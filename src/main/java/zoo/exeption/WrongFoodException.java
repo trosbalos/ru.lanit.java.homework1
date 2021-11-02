@@ -1,4 +1,4 @@
-package zoo.Exeption;
+package zoo.exeption;
 
 public class WrongFoodException extends Exception {
 

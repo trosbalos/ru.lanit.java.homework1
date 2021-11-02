@@ -4,12 +4,15 @@ import zoo.animals.move.Fly;
 import zoo.animals.move.Run;
 import zoo.animals.move.Swim;
 import zoo.animals.move.Voice;
+import zoo.aviary.SizeEnum;
 
 public class Duck extends Carnivorous implements Voice, Swim, Run, Fly {
 
+    SizeEnum size = SizeEnum.SMALL;
 
     public Duck(String name) {
         super(name);
+        sizeEnum = this.size;
     }
 
     @Override

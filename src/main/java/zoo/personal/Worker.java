@@ -1,8 +1,8 @@
 package zoo.personal;
 
-import zoo.Exeption.WrongFoodException;
 import zoo.animals.Animal;
 import zoo.animals.move.Voice;
+import zoo.exeption.WrongFoodException;
 import zoo.food.Food;
 
 public class Worker {

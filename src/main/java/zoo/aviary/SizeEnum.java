@@ -1,4 +1,4 @@
-package zoo.Aviary;
+package zoo.aviary;
 
 public enum SizeEnum {
     SMALL,
