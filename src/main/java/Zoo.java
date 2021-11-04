@@ -54,14 +54,14 @@ public class Zoo {
         }
         System.out.println("----------------");
 
-        Aviary avi1 = new Aviary(SizeEnum.SMALL);
+        Aviary<Carnivorous> avi1 = new Aviary<>(SizeEnum.SMALL);
         avi1.addAnimal(fish2.getName(), fish2);
         avi1.addAnimal(fish.getName(), fish);
         avi1.printAnimals();
         avi1.removeAnimal(fish2.getName());
         avi1.printAnimals();
 
-        Aviary avi2 = new Aviary(SizeEnum.MEDIUM);
+        Aviary<Carnivorous> avi2 = new Aviary<>(SizeEnum.MEDIUM);
         avi2.addAnimal(wolf.getName(), wolf);
         avi2.addAnimal(fish.getName(), fish);
         avi2.addAnimal(duck.getName(), duck);
@@ -69,15 +69,15 @@ public class Zoo {
         avi2.getAnimal(wolf.getName());
 
 
-        Aviary avi3 = new Aviary(SizeEnum.LARGE);
+        Aviary<Herbivore> avi3 = new Aviary<>(SizeEnum.LARGE);
         avi3.addAnimal("Корова Дуся", cow);
         avi3.addAnimal("Лось Анатолий", elk);
         avi3.printAnimals();
 
 
-        Aviary avi4 = new Aviary(SizeEnum.MEDIUM);
+        Aviary<Herbivore> avi4 = new Aviary<>(SizeEnum.MEDIUM);
+//        avi4.addAnimal(wolf.getName(), wolf);
         avi4.addAnimal(ram.getName(), ram);
-        avi4.addAnimal(wolf.getName(), wolf);
         avi4.printAnimals();
 
 
