@@ -3,6 +3,7 @@ package zoo.aviary;
 import zoo.animals.Animal;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 
@@ -10,26 +11,23 @@ public class Aviary<T extends Animal> {
 
     private SizeEnum size;
 
-    private final HashMap<String, T> aviary = new HashMap<String, T>();
-
-    public void addAnimal(String name, Animal animal) {
-
-        if (aviary.size() == 0) {
-            aviary.put(name, (T) animal);
-            size = animal.getSizeEnum();
-        }
-        if (aviary.size() > 0 && animal.getSizeEnum() == size) {
-            for (String t : aviary.keySet()) {
-                Animal value = aviary.get(t);
-                if (value.getClass() == animal.getClass()) {
-                    aviary.put(name, (T) animal);
-                } else System.out.println("Животные разных типов не могет жить в одном вольере");
-                break;
-            }
-        }
-        if (animal.getSizeEnum() != size) System.out.println("Вольер только для животных размера: " + size);
-
+    public Aviary(SizeEnum size) {
+        this.size = size;
     }
+
+    private final Map<String, T> aviary = new HashMap<>();
+
+    public void addAnimal(String name, T animal) {
+
+        if (animal.getSizeEnum() == size) {
+            aviary.put(name, animal);
+        }
+        else System.out.println(animal.getName() +" не влезает в вольер размером : "+ size);
+    }
+
+
+
+
 
     public void removeAnimal(String string) {
         for (String key : aviary.keySet()) {
