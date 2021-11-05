@@ -1,6 +1,5 @@
 package zoo.animals;
 
-import zoo.aviary.SizeEnum;
 import zoo.exeption.WrongFoodException;
 import zoo.food.Food;
 import zoo.food.Grass;
@@ -17,7 +16,7 @@ public abstract class Herbivore extends Animal {
         if (food instanceof Grass) {
             System.out.println(getName() + " кушает траву");
         }
-//        else throw new WrongFoodException(name + " не кушает мясо ");
+       else throw new WrongFoodException(getName() + " не кушает мясо ");
     }
 
     @Override

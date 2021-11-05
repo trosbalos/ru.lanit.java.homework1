@@ -1,6 +1,5 @@
 package zoo.animals;
 
-import zoo.aviary.SizeEnum;
 import zoo.exeption.WrongFoodException;
 import zoo.food.Food;
 import zoo.food.Meat;
@@ -17,7 +16,7 @@ public class Carnivorous extends Animal {
         if (food instanceof Meat) {
             System.out.println(getName() + " кушает мясо");
         }
-//        else throw new WrongFoodException(name + " не кушает траву");
+       else throw new WrongFoodException(getName() + " не кушает траву");
 
     }
 

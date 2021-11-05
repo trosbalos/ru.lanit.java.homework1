@@ -1,59 +1,31 @@
 package zoo.aviary;
 
 import zoo.animals.Animal;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
-
 public class Aviary<T extends Animal> {
 
-    private SizeEnum size;
+    private final SizeEnum size;
+    private final Map<String, T> aviary = new HashMap<>();
 
     public Aviary(SizeEnum size) {
         this.size = size;
     }
 
-    private final Map<String, T> aviary = new HashMap<>();
-
     public void addAnimal(String name, T animal) {
-
-        if (animal.getSizeEnum() == size) {
-            aviary.put(name, animal);
-        }
-        else System.out.println(animal.getName() +" не влезает в вольер размером : "+ size);
+        if (animal.getSizeEnum() == size) aviary.put(name, animal);
+        else System.out.println(animal.getName() + " не влезает в вольер размером : " + size);
     }
-
-
-
-
 
     public void removeAnimal(String string) {
-        for (String key : aviary.keySet()) {
-            Animal value = aviary.get(key);
-            if (value.getName().equals(string)) {
-                aviary.remove(key);
-                System.out.println("Удалили : " + value);
-                System.out.println("--------------------");
-                aviary.remove(key);
-                break;
-            }
-        }
+        aviary.remove(string);
     }
 
-    public Animal getAnimal(String string) {
-        for (String key : aviary.keySet()) {
-            Animal value = aviary.get(key);
-            if (string.equals(value.getName())) {
-                System.out.println("Взяли животное : " + value);
-                System.out.println("--------------------");
-                return value;
-            }
-        }
-        return null;
+    public T getAnimal(String string) {
+        return aviary.remove(string);
     }
-
 
     public void printAnimals() {
         for (String key : aviary.keySet()) {
